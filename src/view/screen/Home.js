@@ -5,8 +5,23 @@ import { ImFacebook,ImTwitter,ImGooglePlus,ImGithub} from "react-icons/im";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel  from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+ import Aos from 'aos';
+ import 'aos/dist/aos.css'
+ import { useEffect } from "react";
+
 function Home(){
   
+ useEffect(()=> {
+   Aos.init({duration:2000});
+ },[]);
+
+console.log(courses);
+const navigate=useNavigate()
+function productinfo(d){
+  navigate('Details',{state:d})
+}
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -25,12 +40,10 @@ function Home(){
       items: 1
     }
   };
-  const nav=useNavigate()
-  console.log(section);
   return(
  <Container fluid >
 <Row>
-  <Col>
+  <Col data-Aos="fade-up">
   <Car>
     {
       slider.map(function(d)
@@ -61,9 +74,9 @@ function Home(){
 section.map(function(d)
 {
   return(
-<Col md={6} lg={3} >
+<Col md={6} lg={3} data-Aos="fade-up">
 
-<Card style={{  }} className="cur  justify-content-center mt " onClick={()=>nav('/Details',{state:d})}>
+<Card style={{  }} className="cur  justify-content-center mt ">
     <div className="imgcard w-100 ">
       <Card.Img variant="top" src={d.image}  className="imgcard "/>
       </div>
@@ -89,7 +102,7 @@ section.map(function(d)
       return(
         <>
         <Col lg={6}>
-        <img src={d.image} className="image-div"/>
+        <img src={d.image} className="image-div" data-Aos="fade-right"/>
         </Col>
         <Col lg={6} className="info-div">
         <h1>{d.name} </h1> 
@@ -102,7 +115,7 @@ section.map(function(d)
       <li>International Certificate</li>
 </ul>
         <Col lg={6} className="button-div" >
-        <Button variant="primary" size="lg" href="src\view\screen\About.js">
+        <Button variant="primary" size="lg" href="src\view\screen\About.js" data-Aos="fade-up">
     Read More
         </Button>{''}
           
@@ -122,7 +135,7 @@ courses.map(function(d)
   return(
 <Col>
   <h1>
-   <span style={{color:"rgb(253, 95, 0)"}}> Our</span> Courses
+   <span style= {{color:"rgb(253, 95, 0)"}}> Our</span> Courses
   </h1>
 </Col>
 )
@@ -136,7 +149,7 @@ courses1.map(function(d)
 {
   return(
     
-  <Col lg={3}> 
+  <Col lg={3} onClick={()=>{productinfo(d)}} className="mt" data-Aos="fade-right"> 
   <CardGroup>
       <Card>
         <Card.Img variant="top" src={d.image} className="courses-card"/>
@@ -178,7 +191,7 @@ teachers1.map(function(d)
 {
   return(
     
-  <Col lg={3}> 
+  <Col lg={3} data-Aos="fade-up"> 
   <CardGroup >
       <Card >
         <Card.Img variant="top" src={d.image}className="teachers-card" ></Card.Img>
@@ -220,7 +233,7 @@ teste1.map(function(d)
   return(
     
   <Col lg={3}> 
-  <CardGroup className="card">
+  <CardGroup className="card" data-Aos="fade-up">
       <Card>
         <Card.Img variant="top" src={d.image} />
         <Card.Body>
@@ -243,8 +256,8 @@ info.map(function(d)
 {
   return(
 <Col>
-  <h1>
-  Joined Courses Collaborations
+  <h1 className="margin">
+  Joined Courses <span style={{color:''}}>Collaborations</span>
   </h1>
   <p>{d.info}</p>
 </Col>
@@ -265,7 +278,7 @@ info.map(function(d)
               return(
                   <div>
                     <div>
-                      <img src={d} style={{width:'100PX',height:'100PX'}}/>
+                      <img src={d} style={{width:'180px',height:'180px'}} />
                     </div> 
                   </div>
                   )
@@ -283,7 +296,7 @@ contact.map(function(d)
   return(
 <Col>
   <h1>
-  Request A Quote!
+ Courses to <span style={{color:''}}>Enroll</span>
   </h1>
 </Col>
 )
@@ -298,7 +311,7 @@ contact.map(function(d)
       return(
         <>
         
-        <Col md={6}>
+        <Col md={6} data-Aos="fade-up">
         <h1 className="dis2">{d.subname} </h1> 
          <h1 className="dis3">{d.name} </h1> 
         <p className="dis3-div">{d.info}</p>
@@ -311,22 +324,22 @@ contact.map(function(d)
 
 </Col>
 
-<Col md={6} className="a1"> 
+<Col md={6} className="a1" data-Aos="fade-right"> 
     <Form className="form-div">
     <h1 className="now">Sign Up Now</h1>
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label></Form.Label>
-        <Form.Control type="name" placeholder="Enter name" />
+        <Form.Control type="name" placeholder="Enter name"  className="w1"/>
         <Form.Text className="text-muted">
         </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Control type="Email" placeholder="Enter email" />
+        <Form.Control type="Email" placeholder="Enter email"className="w2" />
         We'll never share your email with anyone else.
       </Form.Group>
       
-      <Form.Select className="mb-3" aria-label="Default select example">
+      <Form.Select className="mb-3" aria-label="Default select example"className="w3">
       <option>Select a course</option>
       <option value="1"> course One</option>
       <option value="2">course Two</option>
@@ -334,7 +347,7 @@ contact.map(function(d)
     </Form.Select>
     
 <Form action="#">
-      <Button variant="primary" className="message" >
+      <Button variant="primary" className="message2" >
    SignUp Now
       </Button>
       </Form>
@@ -371,7 +384,7 @@ blogs1.map(function(d)
 {
   return(
     
-  <Col lg={4}> 
+  <Col lg={4} data-Aos="fade-up"> 
   <CardGroup >
       <Card >
         <Card.Img variant="top" src={d.image} />
@@ -408,7 +421,7 @@ blogs.map(function(d)
 Apply.map(function(d)
 {
   return(
-<Col>
+<Col data-Aos="fade-up">
  <img src={d.image} className="about-d"></img> 
   <h3>{d.name}</h3>
   <p className="blog-para">{d.info}</p>
@@ -419,7 +432,7 @@ Apply.map(function(d)
 </Row>
 
 <Row>
-  <Col className="career">
+  <Col className="career" data-Aos="fade-up">
 <h3 className="c1">Are you ready to take the next step<br/>towards your future career?</h3>
 <Button variant="outline" className="button4">Application Form</Button>
 <Button variant="outline" className="button5">Request Info</Button>

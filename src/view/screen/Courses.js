@@ -26,7 +26,7 @@ courses1.map(function(d)
   return(
     
   <Col lg={3} > 
-  <CardGroup className="c1">
+  <CardGroup className="c1-div">
       <Card >
         <Card.Img variant="top" src={d.image} />
         <Card.Body>

@@ -2,6 +2,7 @@ import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Home from "./view/screen/Home";
 import About from "./view/screen/About";
 import Courses from "./view/screen/Courses";
+import Ourblogs from "./view/screen/Our blogs";
 import Teachers from "./view/screen/Teachers";
 import Login from "./view/screen/Login";
 import Details from "./view/screen/Details";
@@ -93,6 +94,7 @@ console.log(localStorage.getItem('user'))
   <Route path='/About' element={<About/>}/>
   <Route path='/Details' element={<Details/>}/>
   <Route path='/Courses' element={<Courses/>}/>
+  <Route path='/Our blogs' element={<Ourblogs/>}/>
   <Route path='/Contact us' element={<Contact/>}/>
   <Route path='/Teachers' element={<Teachers/>}/>
   

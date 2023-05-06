@@ -6,7 +6,7 @@ function About(){
       <Row>
         <Col>
         <div className="about-d">
-         {/* <img src={require('.view/img/9-1.jpg')}/>  */}
+        {/* <img src={require('.view/img/9-1.jpg')}/>   */}
         </div>
         </Col>
       </Row>
@@ -46,7 +46,7 @@ verticalalign: 'baseline',fontSize:'20px'}}>Core Values:</p>
     })
     }
     </Row>
-
+    
     </Container>
   );
 }

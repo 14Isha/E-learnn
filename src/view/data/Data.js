@@ -6,11 +6,8 @@ export var menu=[
     {id:2,info:'123 Street, New York, USA',name:"email",image:require('../img/menu/email.png')},
     {id:3,info:'123 Street, New York, USA',name:"call",image:require('../img/menu/phone-call.png')}
  ]
+export var menu1=["Courses","Teachers","Our blogs","Contact us"]
 
-
-export var menu1=["Courses","Teachers","Testimonial","Our blogs","Contact us"]
-
-//  export var menu1=["home","about","subjects","teachers","testimonial","our blogs","contact us","button"]
 export var slider=[
  require('../img/slider/bg_1.jpg.webp'),
  require('../img/slider/bg_2.jpg (2).webp'),
@@ -59,7 +56,6 @@ export var courses1=[
           image:require('../img/ourcourses1/image_2.jpg (1).webp'), id:4, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Gaming and Tournament',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"}
 ]
 
-
 export var teachers=[{
     id:1, name:'Certified Teachers',info:'separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country'
 }]
@@ -97,8 +93,20 @@ export var blogs1=[
 {
     image:require('../img/Blogs/image_2.jpg.webp'), id:2,name:'The Learning Network',info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'},
     {
-        image:require('../img/Blogs/image_3.jpg.webp'), id:3,name:'Edu. Technology & Mobile Learning',info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'},  
- ] 
+        image:require('../img/Blogs/image_3.jpg.webp'), id:3,name:'Edu. Technology & Mobile Learning',info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'},
+ ]
+ 
+ 
+ export var ourblogs1=[
+    {
+       image:require('../img/Blog1/blog.jpg'), id:1,name:'The Learning Network',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
+   {
+       image:require('../img/ourcourses1/course-6.jpg.webp'), id:2, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Web Designing',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
+   {
+       image:require('../img/ourcourses1/course-7.jpg.webp'), id:3, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Online Marketing',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
+    {
+         image:require('../img/Blog1/blog1.jpg'), id:4, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Gaming and Tournament',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"}
+]
 
  export var testimonial=[{
     id:1, name:'Student Says About Us',info:'separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country'
@@ -128,7 +136,6 @@ export var contact=[{
     info:"e-Learning platform apprehended the changing technology dynamics in the industry, which is influenced by different factors like need of solutions for unsolved technical problems, changing characteristics of the social environment etc. In accordance with this trailing thought and in order to empower the students with the latest & prevailing technological skills, we have collaborated with Industry Leaders like Google, Microsoft, Amazon Web Services, Hewlett Packard Enterprise, Adobe, Tech Mahindra, TCS, IBM, Cisco,  etc"
  }]
 
-
  export var collab=[
      require('../img/Collab/Untitled-design-11.png'),
         require('../img/Collab/Untitled-design-12.png'),
@@ -138,8 +145,6 @@ export var contact=[{
         require('../img/Collab/Untitled-design-16.png'),
         require('../img/Collab/Untitled-design-17.png'),
         require('../img/Collab/Untitled-design-18.png')]
-
-
 
         export var Apply=[
             {
