@@ -1,13 +1,20 @@
 import { Container,Row,Col,Card,Form,Button} from "react-bootstrap";
+import Aos from 'aos';
+ import 'aos/dist/aos.css'
+ import { useEffect } from "react";
 
 function Contact(){
+  useEffect(()=> {
+    Aos.init({duration:2000});
+  },[]);
+
     return(
            <Container>
             <Row>
                 <Col><h1>Contact us</h1></Col>
             </Row>
 <Row>
-    <Col>
+    <Col className="con-div">
      <Card style={{ width: '18rem' }}> 
       <Card.Body className="card-contact">
         <Card.Title><h3 style={{fontFamily:'sans-serif',textAlign:'center', fontWeight:'500',fontsize:'22px',lineHeight: '2', color: 'rgba(0, 0, 0, 0.8)'}}>Address</h3></Card.Title>
@@ -18,7 +25,7 @@ function Contact(){
     </Card>
     </Col>
     
-    <Col>
+    <Col className="con1-div">
      <Card style={{ width: '18rem' }}> 
       <Card.Body className="card-contact">
         <Card.Title><h3 style={{fontFamily:'sans-serif',textAlign:'center', fontWeight:'500',fontsize:'22px',lineHeight: '2', color: 'rgba(0, 0, 0, 0.8)'}}>Contact Number</h3></Card.Title>
@@ -29,7 +36,7 @@ function Contact(){
     </Card>
     </Col>
 
-    <Col>
+    <Col className="con1-div">
      <Card style={{ width: '18rem' }}> 
       <Card.Body className="card-contact">
         <Card.Title><h3 style={{fontFamily:'sans-serif',textAlign:'center', fontWeight:'500',fontsize:'22px',lineHeight: '2', color: 'rgba(0, 0, 0, 0.8)'}}>Email Address</h3></Card.Title>
@@ -40,7 +47,7 @@ function Contact(){
     </Card>
     </Col>
 
-    <Col>
+    <Col className="con1-div">
      <Card style={{ width: '18rem' }}> 
       <Card.Body className="card-contact">
         <Card.Title><h3 style={{fontFamily:'sans-serif',textAlign:'center', fontWeight:'500',fontsize:'22px',lineHeight: '2'}}>Website</h3></Card.Title>
@@ -58,18 +65,16 @@ function Contact(){
     <Form className="form-div">
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label></Form.Label>
-        <Form.Control type="name" placeholder="Enter name" />
-        <Form.Text className="text-muted">
-        </Form.Text>
+        <Form.Control type="name" placeholder="Enter name" className="basic"/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Control type="Email" placeholder="Enter email" />
+        <Form.Control type="Email" placeholder="Enter email" className="basic1"/>
         We'll never share your email with anyone else.
       </Form.Group>
       
       <Form.Group className="mb-3" controlId="formBasicSubjects">
-      <Form.Control type="subjects" placeholder="Enter Subjects" />
+      <Form.Control type="subjects" placeholder="Enter Subjects" className="basic2" />
         <Form.Text className="text-muted">
         </Form.Text>
       </Form.Group>

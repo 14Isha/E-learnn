@@ -28,7 +28,7 @@ teachers1.map(function(d)
     
   <Col lg={3}> 
   <CardGroup  className="t1">
-      <Card >
+      <Card className="dive-div">
         <Card.Img variant="top" src={d.image} ></Card.Img>
         <div className="d-inline-flex pt-2 px-2"> <ImFacebook/><ImTwitter/><ImGooglePlus/><ImGithub/></div>
         <Card.Body>

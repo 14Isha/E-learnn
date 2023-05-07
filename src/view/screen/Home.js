@@ -1,5 +1,5 @@
 import { Col, Container, Row,Carousel as Car, Button ,Card,CardGroup,Form ,InputGroup} from "react-bootstrap";
-import { slider,section, rower, courses, courses1, teachers, teachers1, blogs, blogs1, teste1, contact,info, collab, co1, Apply, discount } from "../data/Data";
+import { slider,section, rower, courses, courses1, teachers, teachers1, blogs, blogs1, teste1, contact,info, collab, co1, Apply, discount, counter } from "../data/Data";
 import { useNavigate } from "react-router-dom";
 import { ImFacebook,ImTwitter,ImGooglePlus,ImGithub} from "react-icons/im";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -51,7 +51,7 @@ function productinfo(d){
         return(
           <Car.Item>
           <img
-            className="d-block w-100"
+            className="d-block w-100 "
             src={d}
             alt="First slide"
           />
@@ -102,12 +102,13 @@ section.map(function(d)
       return(
         <>
         <Col lg={6}>
-        <img src={d.image} className="image-div" data-Aos="fade-right"/>
+        <img src={d.image} className="image-div" data-Aos="zoom-in"/>
         </Col>
         <Col lg={6} className="info-div">
         <h1>{d.name} </h1> 
         <p>{d.info}</p>
-      <ul><li>"Skilled Instructors"</li>
+
+      <ul className="underline"><li>"Skilled Instructors"</li>
       <li>Online Classes</li>
       <li>International Certificate</li>
       <li>Skilled Instructors</li>
@@ -121,11 +122,31 @@ section.map(function(d)
           
           </Col>
         </Col>
-
         </>
       )
     })
   }
+</Row>
+
+<Row>
+{
+counter.map(function(d)
+{
+  return(
+    
+  <Col lg={3}> 
+  <CardGroup className="counter-div"data-Aos="fade-right" >
+      
+        <Card.Body>
+          <Card.Text className="counter1">{d.number}</Card.Text>
+          <Card.Title className="counter2">{d.name}</Card.Title>
+        </Card.Body>
+     
+    </CardGroup>
+  </Col>
+  )
+})
+}
 </Row>
 
 <Row className="courses-div">
@@ -151,7 +172,7 @@ courses1.map(function(d)
     
   <Col lg={3} onClick={()=>{productinfo(d)}} className="mt" data-Aos="fade-right"> 
   <CardGroup>
-      <Card>
+      <Card className="hover-div">
         <Card.Img variant="top" src={d.image} className="courses-card"/>
         <Card.Body>
         <Card.Title className="item-div">{d.item}</Card.Title>
@@ -193,8 +214,9 @@ teachers1.map(function(d)
     
   <Col lg={3} data-Aos="fade-up"> 
   <CardGroup >
-      <Card >
+      <Card>
         <Card.Img variant="top" src={d.image}className="teachers-card" ></Card.Img>
+        
         <div className="d-inline-flex pt-2 px-2"> <ImFacebook/><ImTwitter/><ImGooglePlus/><ImGithub/></div>
         <Card.Body>
           <Card.Title className="card-div">{d.name}</Card.Title>
@@ -339,7 +361,7 @@ contact.map(function(d)
         We'll never share your email with anyone else.
       </Form.Group>
       
-      <Form.Select className="mb-3" aria-label="Default select example"className="w3">
+      <Form.Select className="mb-3" aria-label="Default select example" className="w3">
       <option>Select a course</option>
       <option value="1"> course One</option>
       <option value="2">course Two</option>
@@ -362,14 +384,14 @@ contact.map(function(d)
 </Row>
 
 
-<Row className="blog-div" >
+<Row className="recent" >
   {
 blogs.map(function(d)
 {
   return(
 <Col>
   <h1>
-  Recent Blog
+  Recent<span style={{color:''}}> Blog</span>
   </h1>
   <p className="blog-para">{d.info}</p>
 </Col>
@@ -387,7 +409,7 @@ blogs1.map(function(d)
   <Col lg={4} data-Aos="fade-up"> 
   <CardGroup >
       <Card >
-        <Card.Img variant="top" src={d.image} />
+        <Card.Img variant="top" src={d.image} className="blo-div" />
         <Card.Body>
           <Card.Title className="card-div">{d.name}</Card.Title>
           <Card.Text className="card-div1">
@@ -401,7 +423,7 @@ blogs1.map(function(d)
 })
 }
 </Row>
-<Row className="blog-div" >
+<Row className="blog-di" >
   {
 blogs.map(function(d)
 {
@@ -416,13 +438,13 @@ blogs.map(function(d)
 }
 </Row>
 
-<Row className="blog-div" >
+<Row className="blog-divi" >
   {
 Apply.map(function(d)
 {
   return(
 <Col data-Aos="fade-up">
- <img src={d.image} className="about-d"></img> 
+ <img src={d.image} className="about-dy"></img> 
   <h3>{d.name}</h3>
   <p className="blog-para">{d.info}</p>
 </Col>
@@ -443,7 +465,7 @@ Apply.map(function(d)
 </Col>
 </Row>
 
-<Row className="blog-div" >
+<Row className="blog-sec" >
   {
 blogs.map(function(d)
 {

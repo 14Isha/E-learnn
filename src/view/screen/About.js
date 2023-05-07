@@ -1,19 +1,27 @@
 import { Container,Row,Col} from "react-bootstrap";
 import { aboutmore } from "../data/Data";
+import Aos from 'aos';
+ import 'aos/dist/aos.css'
+ import { useEffect } from "react";
+  
 function About(){
+  useEffect(()=> {
+    Aos.init({duration:2000});
+  },[]);
+
   return(
     <Container>
       <Row>
-        <Col>
-        <div className="about-d">
-        {/* <img src={require('.view/img/9-1.jpg')}/>   */}
+        <Col data-Aos="fade-right">
+        <div className="" >
+        <img src={require('../img/9-1.jpg')} className="about-d"/>
         </div>
         </Col>
       </Row>
     <Row>
         <Col><h2 style={{fontSize:'35px',
     fontWeight: '600',
-    lineHeight: '1.1em',textAlign: 'center', paddingBottom:'40px'}}>e-LEARNING - Core Values and Learning Edge</h2></Col>
+    lineHeight: '1.1em',textAlign: 'center', paddingBottom:'40px',marginTop:'60px'}}>e-LEARNING - Core Values and Learning Edge</h2></Col>
     </Row>
     <Row>
     {

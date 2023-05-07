@@ -1,6 +1,7 @@
 .header{font-weight: 500;padding-left:2%;text-align: left;line-height: 1.5; }
 
 .cur{cursor: pointer;height: 80%;}
+.cur:hover{transform: translateY(-20px);}
 
 .nav-div{ color:#06bbcc; font-size: 1.8rem; font-family:sans-serif; font-weight: 700; line-height: 2.0;padding-right: 2px;}
 .nav-div:hover{color:#06bbcc;outline: 0;}
@@ -16,25 +17,28 @@ span{color: #f60;}
 .button{ width: 150px; padding: 15px 0; text-align: center; margin: 0 1rem; border-radius: 8px; font-weight: 500; border: 1px solid #fd5f00;background: #fd5f00; color: #fff; cursor: pointer; line-height: 1.5;
  font-size: 1.1rem;}
 .button:hover{  background:#f60;  border: 1px solid #f60;}
-.imgcard{width:80px;justify-content: center;text-align: center;box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);background-color: #f60;color:rgba(255, 255, 255, 0.8);animation-name: fadeInUp;animation-duration: 0.5s;animation-fill-mode: both;}
-@keyframes fadeInUp{
-    0%{
-       opacity: 0;
-       visibility: hidden;
-       transform: translate3d(0, 40px, 0);
-    }
-    100%{
-       visibility: visible;
-       opacity: 1;
-       transform: none;
-    }
-}
+
+.imgcard{width:80px;justify-content: center;text-align: center;box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);background-color: #f60;color:rgba(255, 255, 255, 0.8);}
+
 .body-div{box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);background:#F0FBFC;transition: 0.5s;}
 .body-div:hover{background:#06bbcc;}
 
 .mt{ margin-top: 30px; margin-bottom: 80px;}
+.hover-div:hover{
+    filter: drop-shadow(0 2px 6px rgba(208, 224, 240, .8));
+}
 
-.image-div{ width: 100%;}
+.image-div{ width: 100%; margin-bottom: 80px; }
+.counter-div{padding: 30px 60px; display: flex; cursor:pointer; background-color: transparent;}
+
+.counter1{color: #de1819;font-size: 40px;font-weight: 600;line-height: 1;text-align: center;}
+
+.counter2{ color: #de1819; ; font-size: 16px; font-weight: 500; text-transform: uppercase; line-height: 1em;
+ text-align: center;vertical-align: baseline;}
+
+.underline{
+    list-style-type:square;
+}
 
 .info-div h1{font-size:2.5rem ;font-weight: 700;line-height: 2.5;font-family: sans-serif;}
 
@@ -52,6 +56,7 @@ box-shadow: none ;display: inline-block; font-weight: 400;text-align: center;use
 .primary:hover{ color: #F0FBFC; background-color:#f60; }
 
 .blog-para{ font-size: 16px;line-height: 1.8; font-weight: 400; color: #666666;}
+.blog-sec{margin-bottom: 30px; margin-top: 50px; text-align:center;}
 
 .card-div{cursor: pointer;font-size: 23px;font-weight: 600;color: #181d38;line-height: 1.5;font-family: Arial, Helvetica, sans-serif;}
 .card-div:hover{ color: #fd5f00;}
@@ -80,7 +85,8 @@ box-shadow: none ;display: inline-block; font-weight: 400;text-align: center;use
 
 .teach-div{color:#fd5f00;cursor: pointer;text-transform: uppercase;letter-spacing: 1.5px;font-size: 12px;font-weight: 500;font-family: Arial, sans-serif;}
 
-.blog-div{text-align: center;margin-top: 60px;margin-bottom: 40px;}
+.blog-di{text-align: center;margin-top: 60px;margin-bottom: 40px;}
+.blog-divi{text-align: center;margin-top: 60px;margin-bottom: 40px;}
 
 .test-div{text-align: center;margin-top: 60px;margin-bottom: 40px;}
 
@@ -88,23 +94,12 @@ box-shadow: none ;display: inline-block; font-weight: 400;text-align: center;use
 
 .courses-card{ transition-duration:0.3;}
 
-.courses-card:hover{transform: scale(0.9);transition: transform 0.5s;border-color: #02010100;border-radius: 20px 20px 20px 20px;}
+.courses-card:hover{transform: scale(0.9);transition: transform 0.7s;border-color: #02010100;border-radius: 20px 20px 20px 20px;}
 
-.t1{ margin-bottom: 40px; animation-name: fadeInUp; animation-duration: 0.5s; animation-fill-mode: both;}
-
-@keyframes fadeInUp{
-    0% {
-        opacity: 0;
-        visibility: visible;
-        transform: translate3d(0px, 40px, 0px);
-    }
-    100% {
-        visibility: visible;
-        opacity: 1;
-        transform: none;
-    }
-}
-.teachers-card:hover{transform: scale(0.9);border-color: #02010100;border-radius: 20px 20px 20px 20px;}
+.d-inline-flex{
+        cursor: pointer;
+      }
+.teachers-card:hover{transform: scale(0.9);transition: transform 0.7s;border-color: #02010100;border-radius: 20px 20px 20px 20px;}
 
 .teach{cursor: pointer;font-size: 23px;font-weight: 600;}
 
@@ -113,16 +108,20 @@ box-shadow: none ;display: inline-block; font-weight: 400;text-align: center;use
 .teach2{color: rgb(102,102,102);margin-top: 0px;margin-bottom: 1rem;display: block;font-family: Arial, Helvetica, sans-serif;font-size: 15px;cursor: pointer;}
 
 .contact-div{text-align: center;margin-top: 60px;margin-bottom: 40px;}
+.recent{text-align: center;margin-top: 60px;margin-bottom: 40px;}
 
 .color-div{ color: #181d38;}
 
 .img-div{width: 100%;}
 
-.card-contact{ height: 180px;}
+.card-contact{ height: 180px; }
+.con-div:hover{transform: translatex(-20px);}
+.con1-div:hover{transform: translateY(-20px);}
 
 .frame-map{
     height: 500px;
     width: 100%;
+    margin-top:20px;
 }
 .form-div{ position: relative; top: 40px;}
 
@@ -141,15 +140,15 @@ box-shadow: none ;display: inline-block; font-weight: 400;text-align: center;use
 
 .a1{ color: #fd5f00;}
 
-.about-d{ width: 80px; justify-content: center;  text-align: center; box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1); color: rgba(255, 255, 255, 0.8); animation-name: fadeInUp;animation-duration: 0.5s;animation-fill-mode: both;}
+.about-dy{ width: 80px; justify-content: center;  text-align: center; box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1); color: rgba(255, 255, 255, 0.8); animation-name: fadeInUp;animation-duration: 0.5s;animation-fill-mode: both;}
 
 .career{background-color: #de1819;color: #F0FBFC;height: 200px;}
 
 .c1{ font-family: 'Times New Roman', Times, serif; word-spacing: 1.2px; margin-left: 25px;margin-top: 20px;font-size: 45px;font-weight: 500;line-height: 1.2em;}
 
 .button4{
-    width: 25%; padding: 20px 0; text-align: center; margin: 0 1rem;border-radius:5px 5px;font-weight: 500;border: 1px solid #292929;background:#292929; position: relative; left: 900px; bottom:140px; color: #ffffff; cursor: pointer; line-height: 1.5;font-size: 18px;}
-.button4:hover{ background:#de1819;border: 1px solid #de1819 transparent ;}
+    width: 25%; padding: 20px 0; text-align: center; margin: 0 1rem;border-radius:5px 5px;font-weight: 500;border: 1px solid #292929;background:#292929; position: relative; left: 900px; bottom:120px; color: #ffffff; cursor: pointer; line-height: 1.5;font-size: 18px;}
+.button4:hover{ background:#de1819;border: 1px solid #de1819 transparent;}
 
 .button5{width: 15%;padding: 20px 0;text-align: center; margin: 0 1rem;border-radius:5px 5px;font-weight: 600;position: relative; left: 480px; bottom: 55px; color: #ffffff;cursor: pointer;line-height: 1.5; font-size: 1.1rem;}
 .button5:hover{ color:#181d38; border: 1px solid #de1819 transparent ;}
@@ -205,3 +204,23 @@ box-shadow: none ;display: inline-block; font-weight: 400;text-align: center;use
 .blog-pdiv3{font-size: 16px; line-height: 24px; font-weight: 400; color: #484848;margin-bottom: 0;position: relative; left: 20px;}
 
 .bt1{background: #008bdc;box-shadow: 0 2px 4px rgba(0,0,0,.08);border-radius: 3px;color: #fff;font-weight: 600;min-width: 80px;line-height: 1.14285714;font-size: 14px;padding-top: calc(12px - 0px);padding-bottom: calc(12px - 0px);padding-left: calc(20px - 0px);padding-right: calc(20px - 0px);width: 30%; margin-top:30px;text-align: center; margin-left: 30%;}
+
+.blo-div{width: 480px;  height: auto;  -webkit-transition: .3s ease-in-out;  transition: .3s ease-in-out}
+.blo-div:hover{ width: 475px;opacity: 0.9;}
+ /* contact us */
+.basic{padding: 12px;position: relative;bottom: 12px;}
+.basic1{padding: 12px;position: relative;bottom: 10px;}
+.basic2{padding: 12px;position: relative;bottom: 12px;}
+.textarea{padding: 14px;position: relative;bottom: 12px;}
+/* about us */
+.about-d{
+   width: 100%;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.to-dive:hover{
+    filter: drop-shadow(0 2px 6px rgba(208, 224, 240, .8));
+}
+.dive-div{
+   
+}

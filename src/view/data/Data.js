@@ -9,9 +9,11 @@ export var menu=[
 export var menu1=["Courses","Teachers","Our blogs","Contact us"]
 
 export var slider=[
- require('../img/slider/bg_1.jpg.webp'),
- require('../img/slider/bg_2.jpg (2).webp'),
- require('../img/value1/college.webp')
+//  require('../img/slider/bg_2.jpg (2).webp'),
+ require('../img/slider/slide1.jpg'),
+ require('../img/slider/hero-bg.jpg'),
+ require('../img/slider/banner11.jpg'),
+//  require('../img/slider/bg_1.jpg.webp')
 ]
 
 export var section=[
@@ -26,11 +28,19 @@ export var section=[
 
 ]
 
+export var counter=[{id:1,number:'10,000+',name:'CAMPUS PLACEMENTS IN LAST 5 YEARS'},
+{id:2,number:'25+',name:'YEARS OF EXPERIENCE'},
+{id:3,number:'5,000+',name:'STUDENTS'},
+{id:4,number:'22,000+',name:'ALUMNI'}
+]
+
 export var rower=[
     {
-        id:1, image: require('../img/offer/about.jpg'), name:'Welcome to eLEARNING',info:"Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet"}
+        id:1, image: require('../img/offer/about.jpg'), name:'Welcome to e-LEARNING', info:"Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet"}
     ]
-   
+
+   export var row=[
+     require('../img/offer/right-arrow.png'),]
 export var courses=[{
     id:1, name:'Our Courses',info:'separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country'
 }]

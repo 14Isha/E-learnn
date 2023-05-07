@@ -27,7 +27,7 @@ courses1.map(function(d)
     
   <Col lg={3} > 
   <CardGroup className="c1-div">
-      <Card >
+      <Card className="to-dive">
         <Card.Img variant="top" src={d.image} />
         <Card.Body>
         <Card.Title className="item-div">{d.item}</Card.Title>
@@ -53,9 +53,9 @@ ourcourses1.map(function(d)
 {
   return(
     
-  <Col lg={3}> 
+  <Col lg={3} > 
   <CardGroup>
-      <Card>
+      <Card  className="to-dive" >
         <Card.Img variant="top" src={d.image} />
         <Card.Body>
         <Card.Title className="item-div">{d.item}</Card.Title>
