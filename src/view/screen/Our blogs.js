@@ -34,10 +34,11 @@ blogs1.map(function(d)
 {
   return(
     
-  <Col lg={3} data-Aos="fade-right"> 
+  <Col lg={4} data-Aos="fade-right"> 
   <CardGroup >
       <Card >
         <Card.Img variant="top" src={d.image} />
+        
         <Card.Body>
           <Card.Title className="card-div">{d.name}</Card.Title>
           <Card.Text className="card-div1">
@@ -59,9 +60,9 @@ ourblogs1.map(function(d)
 {
   return(
     
-  <Col lg={3} data-Aos="fade-down"> 
+  <Col lg={4} data-Aos="fade-left"> 
   <CardGroup >
-      <Card >
+      <Card className="blow">
         <Card.Img variant="top" src={d.image} />
         <Card.Body>
           <Card.Title className="card-div">{d.name}</Card.Title>

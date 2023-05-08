@@ -1,8 +1,14 @@
 import { staff, teachers,teachers1 } from "../data/Data";
 import { Container,Row,Col,Card,CardGroup } from "react-bootstrap";
 import { ImFacebook,ImTwitter,ImGooglePlus,ImGithub} from "react-icons/im";
+import Aos from 'aos';
+ import 'aos/dist/aos.css'
+ import { useEffect } from "react";
 
 function Teachers(){
+  useEffect(()=> {
+    Aos.init({duration:2000});
+  },[]);
     return(
         <Container>
         <Row className="teacher-div" >
@@ -26,7 +32,7 @@ teachers1.map(function(d)
 {
   return(
     
-  <Col lg={3}> 
+  <Col lg={3} data-Aos="fade-right"> 
   <CardGroup  className="t1">
       <Card className="dive-div">
         <Card.Img variant="top" src={d.image} ></Card.Img>
@@ -53,9 +59,9 @@ staff.map(function(d)
 {
   return(
     
-  <Col lg={3}> 
+  <Col lg={3} data-Aos="fade-left"> 
   <CardGroup >
-      <Card >
+      <Card className="dive-div">
         <Card.Img variant="top" src={d.image} ></Card.Img>
         <div className="d-inline-flex pt-2 px-2"> <ImFacebook/><ImTwitter/><ImGooglePlus/><ImGithub/></div>
         <Card.Body>

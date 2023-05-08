@@ -13,8 +13,9 @@ function About(){
     <Container>
       <Row>
         <Col data-Aos="fade-right">
-        <div className="" >
-        <img src={require('../img/9-1.jpg')} className="about-d"/>
+        <div className="">
+        {/* <img src={require('../img/9-1.jpg')} className="about-d"/> */}
+         <video className='about-d' muted loop autoPlay src={require('../video/video.mp4')}></video> 
         </div>
         </Col>
       </Row>

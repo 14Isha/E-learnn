@@ -361,7 +361,7 @@ contact.map(function(d)
         We'll never share your email with anyone else.
       </Form.Group>
       
-      <Form.Select className="mb-3" aria-label="Default select example" className="w3">
+      <Form.Select className="mb-3" aria-label="Default select example" id="w3">
       <option>Select a course</option>
       <option value="1"> course One</option>
       <option value="2">course Two</option>

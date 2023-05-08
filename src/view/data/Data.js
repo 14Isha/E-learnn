@@ -99,11 +99,12 @@ export var teachers1=[
 
 export var blogs1=[
     {
-    image:require('../img/Blogs/image_1.jpg.webp'), id:1,name:'Skills To Develop Your Child Memory',info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'},
+    image:require('../img/Blogs/image_1.jpg.webp'), id:1,name:'Skills To Develop ',info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'},
 {
     image:require('../img/Blogs/image_2.jpg.webp'), id:2,name:'The Learning Network',info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'},
     {
-        image:require('../img/Blogs/image_3.jpg.webp'), id:3,name:'Edu. Technology & Mobile Learning',info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'},
+        image:require('../img/Blogs/image_3.jpg.webp'), id:3,name:'Edu. Techno & Mobilel',info:'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'},
+       
  ]
  
  
@@ -112,10 +113,8 @@ export var blogs1=[
        image:require('../img/Blog1/blog.jpg'), id:1,name:'The Learning Network',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
    {
        image:require('../img/ourcourses1/course-6.jpg.webp'), id:2, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Web Designing',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
-   {
-       image:require('../img/ourcourses1/course-7.jpg.webp'), id:3, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Online Marketing',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
     {
-         image:require('../img/Blog1/blog1.jpg'), id:4, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Gaming and Tournament',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"}
+         image:require('../img/Blog1/blog2.jpg'), id:4, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Gaming and Tournament',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"}
 ]
 
  export var testimonial=[{
