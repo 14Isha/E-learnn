@@ -16,6 +16,7 @@ import './view/style/Style.css'
 import {FaBook } from 'react-icons/fa';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaPhoneAlt,FaEnvelope } from "react-icons/fa";
+import Profile from "./view/screen/Profile";
 function App() {
 
 const[user,setuser]=useState(localStorage.getItem('user'));
@@ -97,6 +98,7 @@ console.log(localStorage.getItem('user'))
   <Route path='/Our blogs' element={<Ourblogs/>}/>
   <Route path='/Contact us' element={<Contact/>}/>
   <Route path='/Teachers' element={<Teachers/>}/>
+  <Route path='/profile' element={<Profile/>}/>
   
 {
 user? null:<>

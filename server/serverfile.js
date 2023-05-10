@@ -16,6 +16,22 @@ app.post('/addtocart',function(req,res){
     fs.appendFileSync('./data/addtocart.json', "\n","utf8")
     res.send(req.body)
  })
+
+
+ app.post('/enrollcourse',function(req,res){
+   let result = fs.appendFileSync('./data/addtocart.json', JSON.stringify(req.body),"utf8")
+    fs.appendFileSync('./data/addtocart.json', "\n","utf8")
+    let resultdata=""
+    if(!result){
+        resultdata={success:true,message:"enroll successfully"}
+    }
+    else{
+        resultdata={success:false,message:"enroll not  successfully"}
+        
+    }
+    res.send(resultdata)
+ })
+ 
  app.post('/register',function(req,res){
     let result=fs.appendFileSync('./data/userdata.json', JSON.stringify(req.body),"utf8")
     fs.appendFileSync('./data/userdata.json', "\n","utf8")
@@ -54,7 +70,9 @@ app.post('/addtocart',function(req,res){
     res.send(resultlog)
  })
 
- app.get('/showtocart',function(req,res){
+
+   
+    app.post('/showenroll',function(req,res){
     let data=fs.readFileSync('./data/addtocart.json',"utf8")
     let adddata=[]
     data.split('\n').forEach(d=>{
@@ -65,9 +83,19 @@ app.post('/addtocart',function(req,res){
         if(d!=="")
         add1.push(JSON.parse(d))
     })
-    console.log(add1);
-    res.send(add1)
+   let cartitem=[]
+   
+    add1.map(d=>{
+        if(req.body.user === d.user){
+                cartitem.push(d);
+        }
+    })
+   
+    res.send(cartitem)
  })
+
+
+
 app.listen(8080,function(err,data){
     if(err){
         console.log(err);
