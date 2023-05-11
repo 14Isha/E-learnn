@@ -12,6 +12,8 @@ const [password,setPassword]=useState('');
 
 
 let submitregister=async()=>{
+  try {
+    
   let params={
     Username:name,
     email:email,
@@ -35,6 +37,12 @@ nav("/Login")
   setEmail("")
   setPassword("")
   setName("")
+
+
+  
+} catch (error) {
+ alert('error')   
+}
     }
     let submitlogin=async()=>{
       
@@ -87,10 +95,18 @@ image.map(function(d)
       </Form.Group>
       
       <Button variant="primary" onClick={submitregister}>
-        Submit
+    Register
       </Button>
     </Form>
         </Col>
+    </Row>
+    <Row>
+      <Col style={{justifyContent:'center',textAlign:'center'}} className='w-100  p-4'>
+        <div><hr/></div>
+      <Button variant="primary" onClick={()=>nav('/login')}>
+       Login
+      </Button>
+      </Col>
     </Row>
 </Container>
 </>
