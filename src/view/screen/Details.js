@@ -1,13 +1,48 @@
-import { useLocation } from "react-router-dom";
+import { useLocation,useNavigate } from "react-router-dom";
 import{blogs, courses, courses1, teste1,}from'../data/Data'
 import { useState } from "react";
 import { Col, Container, Row,Card,CardGroup} from "react-bootstrap";
+import axios from "axios";
 
 function Details(){
-
+const nav = useNavigate();
   const loc=useLocation()
   const [productinfo,]=useState(loc.state )
   console.log(courses,courses1);
+const[user,setUser] = useState(localStorage.getItem('user'))
+  async function enrolluser(data){
+
+    if(user){
+
+        try {
+          console.log(data);
+let params={
+      ...data,
+      user:user
+}
+
+console.log(params);
+
+let res = await axios.post("enrollcourse",params).catch((r)=>console.log(r));
+const{success,message}=res?.data
+
+if(success){
+alert(message)
+      nav("/profile")
+}
+else{
+
+}
+        } catch (error) {
+          
+          console.log(error);
+        }
+    }
+    else{
+      nav('/login')
+
+    }
+  }
 
   return(
    <Container>
@@ -31,7 +66,7 @@ function Details(){
 <li className="d2">Be in demand</li>
 
 <li className="d3">Python is the fastest growing language according to Stack Overflow with an average fresher salary of 5 LPA+ according to Glassdoor.</li></ul>
-<button className="bt1">Enroll Now</button>
+<button className="bt1" onClick={()=>enrolluser(productinfo)}>Enroll Now</button>
         </Col>  
        
 <Row >
