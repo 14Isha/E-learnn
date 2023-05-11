@@ -1,4 +1,4 @@
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+import { BrowserRouter,Routes,Route,useNavigate } from "react-router-dom";
 import Home from "./view/screen/Home";
 import About from "./view/screen/About";
 import Courses from "./view/screen/Courses";
@@ -17,6 +17,7 @@ import {FaBook } from 'react-icons/fa';
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaPhoneAlt,FaEnvelope } from "react-icons/fa";
 function App() {
+  const nav = useNavigate();
 
 const[user,setuser]=useState(localStorage.getItem('user'));
 console.log(localStorage.getItem('user'))
@@ -28,7 +29,7 @@ console.log(localStorage.getItem('user'))
   }
   return (
  <>
- <BrowserRouter>
+
  <Container>
   <Row>
     <Col>
@@ -52,10 +53,7 @@ console.log(localStorage.getItem('user'))
               )
             })
           }
-          {user?null:<>
-          <Nav.Link href="/register" >Register</Nav.Link>
-          <Nav.Link href="/login" >Login</Nav.Link>
-          </>
+          {
 }
            
             {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
@@ -78,10 +76,10 @@ console.log(localStorage.getItem('user'))
               aria-label="Search"
             /> */}
            
-            <Button variant="outline" href="src\view\screen\Register.js"className="button">Join Now</Button>
+            {/* <Button variant="outline" onClick={()=>nav('/login')} className="button">Join Now</Button> */}
           {/* </Form> */}
           {
-         user? <Button onClick={logout}>Logout</Button>:null
+         user? <Button onClick={logout}>Logout</Button>:<Button variant="outline" onClick={()=>nav('/login')} className="button">Join Now</Button>
 }
         </Navbar.Collapse>
       </Container>
@@ -182,7 +180,7 @@ user? null:<>
 </footer>
  </Container>
  </>
- </BrowserRouter>
+ 
  </>
   );
 }
