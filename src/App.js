@@ -26,6 +26,7 @@ console.log(localStorage.getItem('user'))
   function logout(){
     alert('logout')
     localStorage.clear();
+    nav("/")
     window.location.reload();
   }
   return (
@@ -80,7 +81,7 @@ console.log(localStorage.getItem('user'))
             {/* <Button variant="outline" onClick={()=>nav('/login')} className="button">Join Now</Button> */}
           {/* </Form> */}
           {
-         user? <Button onClick={logout}>Logout</Button>:<Button variant="outline" onClick={()=>nav('/login')} className="button">Join Now</Button>
+         user? <><img onClick={()=>nav('/profile')} className="point" src={require('./view/img/Icons/avatar-profile-icon_188544-4755.avif')} style={{width:50}}/><Button onClick={logout}>Logout</Button></>:<Button variant="outline" onClick={()=>nav('/login')} className="button">Join Now</Button>
 }
         </Navbar.Collapse>
       </Container>

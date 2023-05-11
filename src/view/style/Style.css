@@ -2,7 +2,7 @@
 
 .cur{cursor: pointer;height: 80%;}
 .cur:hover{transform: translateY(-20px);}
-
+.point{cursor: pointer;}
 .nav-div{ color:#06bbcc; font-size: 1.8rem; font-family:sans-serif; font-weight: 700; line-height: 2.0;padding-right: 2px;}
 .nav-div:hover{color:#06bbcc;outline: 0;}
 
