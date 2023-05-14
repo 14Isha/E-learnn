@@ -4,8 +4,12 @@ import { Button, Col, Container,Row,CardGroup,Card } from "react-bootstrap";
 import {collab,contact,courses1} from '../data/Data'
 import Carousel  from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useNavigate } from "react-router-dom";
+
 export default function Profile(){
-    
+let nav=useNavigate()    
+  const[pay,setPay]=useState('');
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -33,7 +37,12 @@ async function show(){
 
     let res =await axios.post('showenroll',{user:user})
 console.log(res?.data);
-    setData(res.data)
+let r=0;
+res?.data.map(d=>{
+  r+=d.rate
+})
+setPay(r)
+setData(res.data)
 }
 show()
 
@@ -49,6 +58,19 @@ show()
     }
 
 console.log(courses1);
+
+async function viewtopics(){
+
+  if(user){
+    nav("/topics")
+  }
+  else{
+    nav("/login")
+
+  }
+}
+
+
     return(
         <>
         <h1>profiles</h1>
@@ -61,8 +83,11 @@ console.log(courses1);
                                    
                                         <div className="d-flex m-4 shadow-sm">
                                             <img src={d.image} style={{width:100}}/>
+                                            <div>
                                             <p className="mx-5">{d.name}</p>
-                                            <Button >View Topics</Button>
+                                            <p className="mx-5">Rs.{d.rate}/-</p>
+                                            </div>
+                                            <Button onClick={viewtopics} >View Topics</Button>
                                         </div>
                                    
                                 )
@@ -70,7 +95,8 @@ console.log(courses1);
                         
                 </Col>
                 <Col>
-                    
+                        <h1>Total Pay:{pay}</h1>
+                        <Button onClick={()=>nav("/payment",{state:pay})}>Payment</Button> 
                 </Col>
             </Row>
             <Row>

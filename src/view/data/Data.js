@@ -46,13 +46,13 @@ export var courses=[{
 }]
 export var courses1=[
     {
-    image:require('../img/courses/course-1.jpg.webp'), id:1, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Electric Engineering',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
+    image:require('../img/courses/course-1.jpg.webp'), rate:2000,id:1, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Electric Engineering',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
 {
-    image:require('../img/courses/course-2.jpg'), id:2, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Web Designing',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
+    image:require('../img/courses/course-2.jpg'), rate:2000,id:2, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Web Designing',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
 {
-    image:require('../img/courses/course-3.jpg.webp'), id:3, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Online Marketing',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
+    image:require('../img/courses/course-3.jpg.webp'), rate:2000,id:3, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Online Marketing',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
 {
-     image:require('../img/courses/course-4.jpg (2).jpg'), id:4, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Gaming and Tournament',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"}
+     image:require('../img/courses/course-4.jpg (2).jpg'), rate:2000,id:4, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Gaming and Tournament',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"}
 ]
 
      export var ourcourses1=[
