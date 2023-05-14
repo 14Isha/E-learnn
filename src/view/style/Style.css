@@ -194,12 +194,16 @@ box-shadow: none ;display: inline-block; font-weight: 400;text-align: center;use
 
 .high1{margin-bottom: 32px; font-size: 35px;line-height:50px;font-weight: 600;text-align: center;padding-top: 10px;}
 
-.high2{margin: auto;display: flex;flex-wrap: wrap;row-gap: 32px;column-gap: 64px;padding-top: 10px;}
+.high2{margin: auto;display: flex;flex-wrap: wrap;row-gap: 32px;column-gap: 30px;padding-top: 10px;}
 
 .blog-pdiv{font-size: 16px; line-height: 24px; font-weight: 400; color: #484848;margin-bottom: 0; line-height: 2;}
 
 .blog-pdiv1{margin-bottom: 4px;font-size: 18px;line-height: 24px;font-weight: 600;color: #333;}
-.blog-pdiv2{margin-bottom: 4px;font-size: 18px;line-height: 24px;font-weight: 600;color: #333;position: relative; left: 20px;}
+.blog-pdiv2{margin-bottom: 4px;font-size: 18px;line-height: 24px;font-weight: 600;color: #333;position: relative; right: px;}
+.pro-div{
+    position: relative;left: 10px;
+}
+.place{margin-bottom: 4px;font-size: 18px;line-height: 24px;font-weight: 600;color: #333;position: relative; right: 30px;}
 
 .blog-pdiv3{font-size: 16px; line-height: 24px; font-weight: 400; color: #484848;margin-bottom: 0;position: relative; left: 20px;}
 
@@ -228,4 +232,10 @@ box-shadow: none ;display: inline-block; font-weight: 400;text-align: center;use
 }
 .blow{
     margin-top: 30px;
+}
+.faq-div{ font-weight: 600;
+    position: relative;
+    right: 10px;
+   text-align: left;
+   
 }
