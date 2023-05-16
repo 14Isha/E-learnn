@@ -1,7 +1,7 @@
 import { useLocation,useNavigate } from "react-router-dom";
 import{blogs, courses, courses1, teste1,}from'../data/Data'
 import { useState } from "react";
-import { Col, Container, Row,Card,CardGroup,Form} from "react-bootstrap";
+import { Col, Container, Row,Card,CardGroup,} from "react-bootstrap";
 import axios from "axios";
 
 function Details(){

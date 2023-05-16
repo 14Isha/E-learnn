@@ -3,12 +3,20 @@ import { courses, courses1,ourcourses1 } from "../data/Data";
 import Aos from 'aos';
  import 'aos/dist/aos.css'
  import { useEffect } from "react";
+ import { useNavigate } from "react-router-dom";
+
 
 
 function Courses(){
   useEffect(()=> {
     Aos.init({duration:2000});
   },[]);
+  console.log(courses);
+const navigate=useNavigate()
+function productinfo(d){
+  navigate('Details',{state:d})
+  
+}
     return(
      <Container>
         <Row className="courses-div">
@@ -18,6 +26,7 @@ courses.map(function(d)
   return(
 <Col>
   <h1>
+  
    <span style={{color:"rgb(253, 95, 0)"}}> Our</span> Courses
   </h1>
 </Col>
@@ -32,7 +41,7 @@ courses1.map(function(d)
 {
   return(
     
-  <Col lg={3} data-Aos="fade-right" > 
+  <Col lg={3} data-Aos="fade-right"onClick={()=>{productinfo(d)}} > 
   <CardGroup className="c1-div">
       <Card className="to-dive">
         <Card.Img variant="top" src={d.image} />

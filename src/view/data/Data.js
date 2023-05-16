@@ -1,6 +1,3 @@
-
-export var logo=["fox","university"]
-
 export var menu=[
     {id:1,info:'123 Street, New York, USA', name:"Our Office",image:require('../img/menu/placeholder.png')},
     {id:2,info:'123 Street, New York, USA',name:"email",image:require('../img/menu/email.png')},
@@ -107,14 +104,13 @@ export var blogs1=[
        
  ]
  
- 
  export var ourblogs1=[
     {
        image:require('../img/Blog1/blog.jpg'), id:1,name:'The Learning Network',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
    {
        image:require('../img/ourcourses1/course-6.jpg.webp'), id:2, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Web Designing',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
     {
-         image:require('../img/Blog1/blog2.jpg'), id:4, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Gaming and Tournament',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"}
+         image:require('../img/Blog1/blog2.jpg'), id:4, item:"MR. KHAN 10 SEATS 4 YEARS",name:'Gaming and Tournament',info:"Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country"},
 ]
 
  export var testimonial=[{
@@ -168,4 +164,13 @@ export var contact=[{
             {
              id:1,subname:'NEED ANY COURSES',name:'30% Off For New Students',info:'Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor'}
          ] 
+         export var echers=[{
+                image:require('../img/teachers1/teacher-1.jpg.webp'), id:1,name:'Bianca Wilson',item:'TEACHER',info:'I am an ambitious workaholic, but apart from that, pretty simple person.'},
+            {
+                image:require('../img/teachers1/teacher-2.jpg.webp'), id:2,name:'Mitch Parker',item:'ENGLISH TEACHER',info:'I am an ambitious workaholic, but apart from that, pretty simple person.'},
+                {
+                    image:require('../img/teachers1/teacher-3.jpg.webp'), id:3,name:'Stella Smith',item:'ART TEACHER',info:'I am an ambitious workaholic, but apart from that, pretty simple person.'}, 
+                    {
+                        image:require('../img/teachers1/teacher-4.jpg.webp'), id:4,name:'Monshe Henderson',item:'SCIENCE TEACHER',info:'I am an ambitious workaholic, but apart from that, pretty simple person.'}      
+            ]
         

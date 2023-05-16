@@ -36,7 +36,13 @@ teachers1.map(function(d)
   <CardGroup  className="t1">
       <Card className="dive-div">
         <Card.Img variant="top" src={d.image} ></Card.Img>
-        <div className="d-inline-flex pt-2 px-2"> <ImFacebook/><ImTwitter/><ImGooglePlus/><ImGithub/></div>
+        <a href="#">
+        <div className="d-inline-flex"> <ImFacebook/>
+        <div className="flex-div"><ImTwitter/></div>
+        <div className="flex-div1"><ImGooglePlus/></div>
+        <div className="flex-div2"><ImGithub/></div>
+        </div>
+        </a>
         <Card.Body>
           <Card.Title className="card-div">{d.name}</Card.Title>
           <Card.Text className="teach-div">{d.item}</Card.Text>
@@ -63,7 +69,13 @@ staff.map(function(d)
   <CardGroup >
       <Card className="dive-div">
         <Card.Img variant="top" src={d.image} ></Card.Img>
-        <div className="d-inline-flex pt-2 px-2"> <ImFacebook/><ImTwitter/><ImGooglePlus/><ImGithub/></div>
+        <a href="#">
+        <div className="d-inline-flex"> <ImFacebook/>
+        <div className="flex-div"><ImTwitter/></div>
+        <div className="flex-div1"><ImGooglePlus/></div>
+        <div className="flex-div2"><ImGithub/></div>
+        </div>
+        </a>
         <Card.Body>
           <Card.Title className="card-div">{d.name}</Card.Title>
           <Card.Text className="teach-div">{d.item}</Card.Text>

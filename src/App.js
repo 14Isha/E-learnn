@@ -20,7 +20,7 @@ import Profile from "./view/screen/Profile";
 function App() {
   const nav = useNavigate();
 
-const[user,setuser]=useState(localStorage.getItem('user'));
+const[user]=useState(localStorage.getItem('user'));
 console.log(localStorage.getItem('user'))
   console.log(menu1);
   function logout(){

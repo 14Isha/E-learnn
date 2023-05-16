@@ -1,6 +1,7 @@
 import { Col, Container, Row,Carousel as Car, Button ,Card,CardGroup,Form ,InputGroup} from "react-bootstrap";
 import { slider,section, rower, courses, courses1, teachers, teachers1, blogs, blogs1, teste1, contact,info, collab, co1, Apply, discount, counter } from "../data/Data";
 import { useNavigate } from "react-router-dom";
+import{useState} from 'react';
 import { ImFacebook,ImTwitter,ImGooglePlus,ImGithub} from "react-icons/im";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel  from "react-multi-carousel";
@@ -11,7 +12,8 @@ import "react-multi-carousel/lib/styles.css";
  import { useEffect } from "react";
 
 function Home(){
-  
+  const nav = useNavigate();
+  const[password,setPassword]=useState('');
  useEffect(()=> {
    Aos.init({duration:2000});
  },[]);
@@ -108,7 +110,7 @@ section.map(function(d)
         <h1>{d.name} </h1> 
         <p>{d.info}</p>
 
-      <ul className="underline"><li>"Skilled Instructors"</li>
+      <ul className="underline"><li>Skilled Instructors</li>
       <li>Online Classes</li>
       <li>International Certificate</li>
       <li>Skilled Instructors</li>
@@ -116,9 +118,11 @@ section.map(function(d)
       <li>International Certificate</li>
 </ul>
         <Col lg={6} className="button-div" >
-        <Button variant="primary" size="lg" href="src\view\screen\About.js" data-Aos="fade-up">
+        
+        <Button variant="primary" size="lg" data-Aos="fade-up" onClick={()=>nav('/About')}>
     Read More
         </Button>{''}
+
           
           </Col>
         </Col>
@@ -128,13 +132,13 @@ section.map(function(d)
   }
 </Row>
 
-<Row>
+<Row >
 {
 counter.map(function(d)
 {
   return(
     
-  <Col lg={3}> 
+  <Col lg={3} className="div-count"> 
   <CardGroup className="counter-div"data-Aos="fade-right" >
       
         <Card.Body>
@@ -216,8 +220,15 @@ teachers1.map(function(d)
   <CardGroup >
       <Card>
         <Card.Img variant="top" src={d.image}className="teachers-card" ></Card.Img>
+        <a href="#">
+        <div className="d-inline-flex"> <ImFacebook/>
+        <div className="flex-div"><ImTwitter/></div>
+        <div className="flex-div1"><ImGooglePlus/></div>
+        <div className="flex-div2"><ImGithub/></div>
+        </div>
+        </a>
         
-        <div className="d-inline-flex pt-2 px-2"> <ImFacebook/><ImTwitter/><ImGooglePlus/><ImGithub/></div>
+        
         <Card.Body>
           <Card.Title className="card-div">{d.name}</Card.Title>
           <Card.Text className="teach-div">{d.item}</Card.Text>
@@ -367,12 +378,14 @@ contact.map(function(d)
       <option value="2">course Two</option>
       <option value="3">course Three</option>
     </Form.Select>
-    
+    <Form.Control className="mb-3" type="Password" placeholder="Enter password" value={password} onChange={(d)=>setPassword(d.target.value)}id="w4"/>
+        Password must be Strong.
 <Form action="#">
-      <Button variant="primary" className="message2" >
+      <Button className="mb-3" variant="primary"id="mewe-div"onClick={()=>nav('/Login')}>
    SignUp Now
       </Button>
       </Form>
+  
     </Form> 
     </Col>
           
