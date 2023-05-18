@@ -15,7 +15,7 @@ function Contact(){
                 <p>The Ultimate Guide To Ace the Interview</p></Col>
             </Row>
 <Row>
-    <Col className="con-div" data-Aos="fade-left">
+    <Col className="con-div" data-Aos="flip-right">
      <Card style={{ width: '18rem' }}> 
       <Card.Body className="card-contact">
         <Card.Title><h3 style={{fontFamily:'sans-serif',textAlign:'center', fontWeight:'500',fontsize:'22px',lineHeight: '2', color: 'rgba(0, 0, 0, 0.8)'}}>Address</h3></Card.Title>
@@ -26,7 +26,7 @@ function Contact(){
     </Card>
     </Col>
     
-    <Col className="con1-div" data-Aos="fade-left" >
+    <Col className="con1-div" data-Aos="flip-right" >
      <Card style={{ width: '18rem' }}> 
       <Card.Body className="card-contact">
         <Card.Title><h3 style={{fontFamily:'sans-serif',textAlign:'center', fontWeight:'500',fontsize:'22px',lineHeight: '2', color: 'rgba(0, 0, 0, 0.8)'}}>Contact Number</h3></Card.Title>
@@ -37,7 +37,7 @@ function Contact(){
     </Card>
     </Col>
 
-    <Col className="con1-div" data-Aos="fade-left" >
+    <Col className="con1-div" data-Aos="flip-right" >
      <Card style={{ width: '18rem' }}> 
       <Card.Body className="card-contact">
         <Card.Title><h3 style={{fontFamily:'sans-serif',textAlign:'center', fontWeight:'500',fontsize:'22px',lineHeight: '2', color: 'rgba(0, 0, 0, 0.8)'}}>Email Address</h3></Card.Title>
@@ -48,7 +48,7 @@ function Contact(){
     </Card>
     </Col>
 
-    <Col className="con1-div" data-Aos="fade-left" >
+    <Col className="con1-div" data-Aos="flip-right" >
      <Card style={{ width: '18rem' }}> 
       <Card.Body className="card-contact">
         <Card.Title><h3 style={{fontFamily:'sans-serif',textAlign:'center', fontWeight:'500',fontsize:'22px',lineHeight: '2'}}>Website</h3></Card.Title>
@@ -60,9 +60,9 @@ function Contact(){
     </Col>
 </Row>
 <Row>
-    <Col data-Aos="fade-down" ><iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    <Col data-Aos="fade-right" ><iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
           frameborder="0" className="frame-map"></iframe></Col>
-    <Col data-Aos="fade-right" > 
+    <Col data-Aos="fade-up-left" > 
     <Form className="form-div">
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label></Form.Label>

@@ -39,7 +39,9 @@ console.log(localStorage.getItem('user'))
     <Col>
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#" className="nav-div">< FaBook/> <span>e</span>-LEARNING</Navbar.Brand>
+         <Navbar.Brand href="#">
+        <img src={require('./view/img/logo.project.png')} className="logo-div"/>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

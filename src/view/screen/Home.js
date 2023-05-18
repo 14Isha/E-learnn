@@ -97,16 +97,17 @@ section.map(function(d)
 )}
 </Row>
 
-
 <Row>
   {
+    
     rower.map(function(d){
       return(
         <>
-        <Col lg={6}>
+        <Col lg={5}md={12}>
+          
         <img src={d.image} className="image-div" data-Aos="zoom-in"/>
         </Col>
-        <Col lg={6} className="info-div">
+        <Col lg={6} className="info-div" data-Aos="fade-left" >
         <h1>{d.name} </h1> 
         <p>{d.info}</p>
 
@@ -122,8 +123,6 @@ section.map(function(d)
         <Button variant="primary" size="lg" data-Aos="fade-up" onClick={()=>nav('/About')}>
     Read More
         </Button>{''}
-
-          
           </Col>
         </Col>
         </>
@@ -218,7 +217,7 @@ teachers1.map(function(d)
     
   <Col lg={3} data-Aos="fade-up"> 
   <CardGroup >
-      <Card>
+      <Card >
         <Card.Img variant="top" src={d.image}className="teachers-card" ></Card.Img>
         <a href="#">
         <div className="d-inline-flex"> <ImFacebook/>
@@ -467,9 +466,9 @@ Apply.map(function(d)
 </Row>
 
 <Row>
-  <Col className="career" data-Aos="fade-up">
+  <Col className="career" data-Aos="zoom-in-up">
 <h3 className="c1">Are you ready to take the next step<br/>towards your future career?</h3>
-<Button variant="outline" className="button4">Application Form</Button>
+<Button variant="outline" className="button4"onClick={()=>nav('/Register')} >Application Form</Button>
 <Button variant="outline" className="button5">Request Info</Button>
 <Button variant="outline" className="button6">Visit</Button>
 
