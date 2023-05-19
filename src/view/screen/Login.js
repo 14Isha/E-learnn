@@ -50,7 +50,7 @@ setPassword("")
     return(
         <>
 
-<h2 className='header'>Get's Started Login Now.</h2>
+<h2 className='header'>Get's Started</h2>
 <Container>
     <Row>
       <Col>

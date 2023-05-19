@@ -1,5 +1,5 @@
 import { Container,Row,Col,Card,CardGroup,Form,Button} from "react-bootstrap";
-import { aboutmore, blogs, blogs1, echers, teachers } from "../data/Data";
+import { aboutmore, blogs, blogs1, teachers,staff } from "../data/Data";
 import { ImFacebook,ImTwitter,ImGooglePlus,ImGithub} from "react-icons/im";
 import Aos from 'aos';
  import 'aos/dist/aos.css'
@@ -90,19 +90,16 @@ teachers.map(function(d)
 })
 }
 </Row>
-         <Row>
-
+<Row>
 {
-
-echers.map(function(d)
+staff.map(function(d)
 {
   return(
     
-  <Col  data-Aos="fade-up"> 
+  <Col lg={3} data-Aos="fade-left"> 
   <CardGroup >
-      <Card>
-        <Card.Img variant="top" src={d.image}className="teachers-card" ></Card.Img>
-        
+      <Card className="dive-div">
+        <Card.Img variant="top" src={d.image} ></Card.Img>
         <a href="#">
         <div className="d-inline-flex"> <ImFacebook/>
         <div className="flex-div"><ImTwitter/></div>

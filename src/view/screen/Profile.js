@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Button, Col, Container,Row,CardGroup,Card } from "react-bootstrap";
-import {collab,contact,courses1} from '../data/Data'
+import { Button, Col, Container,Row,} from "react-bootstrap";
+import {courses1} from '../data/Data'
 import Carousel  from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useNavigate } from "react-router-dom";
@@ -73,21 +73,22 @@ async function viewtopics(){
 
     return(
         <>
-        <h1>profiles</h1>
+        <h1 className="shop-cart">Shopping Cart</h1>
         <Container>
             <Row>
                 <Col>
-                        
                             {data&&data.map(d=>{
                                 return(
                                    
-                                        <div className="d-flex m-4 shadow-sm">
+                                        <div className="d-flex m-4 ">
                                             <img src={d.image} style={{width:100}}/>
                                             <div>
                                             <p className="mx-5">{d.name}</p>
                                             <p className="mx-5">Rs.{d.rate}/-</p>
+                                    
                                             </div>
                                             <Button onClick={viewtopics} >View Topics</Button>
+                                          
                                         </div>
                                    
                                 )
@@ -96,24 +97,24 @@ async function viewtopics(){
                 </Col>
                 <Col>
                         <h1>Total Pay:{pay}</h1>
-                        <Button onClick={()=>nav("/payment",{state:pay})}>Payment</Button> 
+                        <br/>
+                        <Button className="bt1" onClick={()=>nav("/payment",{state:pay})}>Payment</Button> 
                 </Col>
             </Row>
+            <br/>
             <Row>
 <Col>
-<h1 style={{backgroundColor:'blue',color:'white'}} className="p-4">Course</h1>
+<h3 className="p-3">You might also like</h3>
 <Carousel responsive={responsive}
-        autoPlaySpeed={500}
         infinite={true}
-        transitionDuration={500}
-          autoPlay={true}
         >
-          { courses1.map(function(d){
+          {courses1.map(function(d){
               return(
                   <div>
                     <div>
-                      <img src={d.image} style={{width:'180px',height:'180px'}} />
+                      <img src={d.image} style={{width:'80%',height:'80%'}} />
                       <p>{d.name}</p>
+                      <i>{d.info}</i>
                     </div> 
                   </div>
                   )
@@ -127,20 +128,7 @@ async function viewtopics(){
 
 
 
-<Row className="contact-div" >
-  {
-contact.map(function(d)
-{
-  return(
-<Col>
-  <h1>
- Courses to <span style={{color:''}}>Enroll</span>
-  </h1>
-</Col>
-)
-})
-}
-</Row>
+
         </Container>
         </>
     )

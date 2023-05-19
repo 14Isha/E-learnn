@@ -103,8 +103,7 @@ section.map(function(d)
     rower.map(function(d){
       return(
         <>
-        <Col lg={5}md={12}>
-          
+        <Col lg={5}md={12}> 
         <img src={d.image} className="image-div" data-Aos="zoom-in"/>
         </Col>
         <Col lg={6} className="info-div" data-Aos="fade-left" >
