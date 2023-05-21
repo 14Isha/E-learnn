@@ -59,6 +59,7 @@ nav("/Login")
 return(
     <>
     <h2 className='header'>Get's Started.</h2>
+    <div className='header-start'></div>
 <Container>
     <Row>
       <Col>
@@ -94,7 +95,7 @@ image.map(function(d)
         Password must be Strong.
       </Form.Group>
       
-      <Button variant="primary" onClick={submitregister}>
+      <Button variant="primary"className="bt1" onClick={submitregister}>
     Register
       </Button>
     </Form>

@@ -50,7 +50,8 @@ setPassword("")
     return(
         <>
 
-<h2 className='header'>Get's Started</h2>
+<h2 className='header'>Welcome back!</h2>
+<div className='header-start'></div>
 <Container>
     <Row>
       <Col>
@@ -80,9 +81,9 @@ image.map(function(d)
         <Form.Control type="Password" placeholder="Enter password" value={password} onChange={(d)=>setPassword(d.target.value)} />
         Password must be Strong.
       </Form.Group>
-      
-      <Button variant="primary" onClick={submitlogin}>
-       Login
+      <br/>
+      <Button variant="primary"className="bt1" onClick={submitlogin} >
+      Login
       </Button>
     </Form>
         </Col>

@@ -97,7 +97,7 @@ section.map(function(d)
 )}
 </Row>
 
-<Row>
+<Row className="newcolor">
   {
     
     rower.map(function(d){
@@ -119,7 +119,7 @@ section.map(function(d)
 </ul>
         <Col lg={6} className="button-div" >
         
-        <Button variant="primary" size="lg" data-Aos="fade-up" onClick={()=>nav('/About')}>
+        <Button className="about-primary" variant="primary" size="lg" data-Aos="fade-up" onClick={()=>nav('/About')}>
     Read More
         </Button>{''}
           </Col>
@@ -129,8 +129,8 @@ section.map(function(d)
     })
   }
 </Row>
-
-<Row >
+<br/><br/>
+<Row>
 {
 counter.map(function(d)
 {
@@ -138,13 +138,12 @@ counter.map(function(d)
     
   <Col lg={3} className="div-count"> 
   <CardGroup className="counter-div"data-Aos="fade-right" >
-      
         <Card.Body>
           <Card.Text className="counter1">{d.number}</Card.Text>
           <Card.Title className="counter2">{d.name}</Card.Title>
         </Card.Body>
-     
     </CardGroup>
+    <div className="counter-co"></div>
   </Col>
   )
 })

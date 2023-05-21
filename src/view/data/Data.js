@@ -25,7 +25,7 @@ export var section=[
 
 ]
 
-export var counter=[{id:1,number:'10,000+',name:'CAMPUS PLACEMENTS IN LAST 5 YEARS'},
+export var counter=[{id:1,number:'10,000+',name:'CAMPUS PLACEMENTS'},
 {id:2,number:'25+',name:'YEARS OF EXPERIENCE'},
 {id:3,number:'5,000+',name:'STUDENTS'},
 {id:4,number:'22,000+',name:'ALUMNI'}
@@ -33,7 +33,7 @@ export var counter=[{id:1,number:'10,000+',name:'CAMPUS PLACEMENTS IN LAST 5 YEA
 
 export var rower=[
     {
-        id:1, image: require('../img/offer/abt-1.jpg'), name:'Welcome to e-LEARNING', info:"Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet"}
+        id:1, image: require('../img/offer/abt-1.jpg'), name:'Welcome to e-PATHSALA', info:"Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet"}
     ]
 
    export var row=[

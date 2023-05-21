@@ -33,7 +33,7 @@ function About(){
     <Container>
       <Row>
         <Col data-Aos="fade-down">
-        <img src={require('../img/banner-1920.webp')} className="about-d" />
+        <img src={require('../img/A Platform for the next generation of learners.png')} className="about-d"/>
         
         </Col>
       </Row>

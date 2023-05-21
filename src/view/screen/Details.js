@@ -82,7 +82,7 @@ else{
           </div>
           <div id="cp">
           <div className="cp1"> Course Price
-          <p className="cp2">1349 <span style={{color:'#333', fontweight:'600',fontSize:'15px', fontfamily:' Arial, Helvetica, sans-serif;'}}>Valid till 19th May</span></p>
+          <p className="cp2">1349₹ <span style={{color:'#333', fontweight:'600',fontSize:'15px', fontfamily:' Arial, Helvetica, sans-serif;'}}>Valid till 19th May</span></p>
           </div>
           <button className="bt1" onClick={()=>enrolluser(productinfo)}>Enroll Now</button>
           </div>

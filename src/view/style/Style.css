@@ -1,5 +1,11 @@
 *{scroll-behavior: smooth;}
-.header{font-weight: 500;padding-left:2%;text-align: left;line-height: 1.5; }
+.header{font-weight: 500;padding-left:2%;text-align: left;line-height: 1; }
+.header-start{
+background-color: rgb(42, 115, 204);
+    height: 2px;
+    margin-bottom:20px;
+    margin-left: 20px;
+    width:15%}
 
 .cur{cursor: pointer;height: 80%;}
 .cur:hover{transform: translateY(-20px);}
@@ -28,11 +34,14 @@ span{color: #f60;}
 .hover-div:hover{
     filter: drop-shadow(0 2px 6px rgba(208, 224, 240, .8));
 }
-
-.image-div{ width: 100%;margin-bottom: 80px; position: relative;border-radius: 50%;overflow: hidden;border-style: none;padding-right: 15px;padding-left: 15px;}
+.newcolor{background-color: #ebf3ff;}
+.image-div{ width: 100%;margin-bottom: 50px; position: relative;border-radius: 50%;overflow: hidden;border-style: none;padding-right: 15px;padding-left: 15px; margin-top: 20px;}
+.about-primary:hover{background:#008bdc;border: #008bdc;}
 
 .counter-div{padding: 30px 60px; display: flex; cursor:pointer; background-color: transparent}
 
+.counter-co{width: 100%;
+    height: 5px;background-image: linear-gradient(90deg,#005abd,#4fbde9);}
 .div-count{background-color:#F0FBFC}
 
 .counter1{color: #de1819;font-size: 40px;font-weight: 600;line-height: 1;text-align: center;}
@@ -42,7 +51,7 @@ span{color: #f60;}
 
 .underline{list-style-type:square;margin-left: 20px;}
 
-.info-div h1{font-size:2.5rem ;font-weight: 700;line-height: 2.5;font-family: sans-serif; margin-left: 30px;}
+.info-div h1{font-size:2.5rem ;font-weight: 700;line-height: 2.5;font-family: sans-serif; margin-left: 30px;margin-top: 50px;}
 
 .info-div p{margin-bottom: 1.5rem;font-family: "Heebo",sans-serif;font-size: 1rem;font-weight: 400;line-height: 1.6;color: #52565b;margin-left: 30px;}
 
@@ -188,7 +197,6 @@ background-color: #4bd8fb;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-   
     position: absolute;
     top: 0;
     right: 0;
@@ -326,9 +334,9 @@ background-color: #4bd8fb;
 .textarea{padding: 14px;position: relative;bottom: 12px;width: 30%; height: 100px;}
 /* about us */
 .about-d{
- height: 400px; background-position: center;position: relative; right:400px; background-color: #277fe3;background-repeat: no-repeat;background-size: cover; overflow: hidden;}
- 
-
+    position: relative;
+    right: 30px;
+   }
 
 .to-dive:hover{filter: drop-shadow(0 2px 6px rgba(208, 224, 240, .8));}
 /* teachers */
